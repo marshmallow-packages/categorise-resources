@@ -1,0 +1,41 @@
+{
+    "name": "marshmallow/categorise-resources",
+    "description": "Group and categorise your nova resources",
+    "keywords": [
+        "laravel",
+        "nova"
+    ],
+    "homepage": "https://github.com/marshmallow-packages/categorise-resources",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Stef van Esch",
+            "email": "stef@marshmallow.dev",
+            "role": "Developer"
+        },{
+            "name": "Alex Bowers",
+            "email": "bowersbros@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Marshmallow\\CategoriseResources\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Marshmallow\\CategoriseResources\\ToolServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

@@ -4,9 +4,6 @@ namespace Marshmallow\CategoriseResources;
 
 use Laravel\Nova\Nova;
 use Illuminate\Http\Request;
-use Laravel\Nova\Http\Requests\NovaRequest;
-use Illuminate\Support\Str;
-use Symfony\Component\Finder\Finder;
 
 class NovaCategorise extends Nova
 {
@@ -15,10 +12,9 @@ class NovaCategorise extends Nova
         return collect(self::availableResources($request))->filter(function ($resource) {
             return $resource::$displayInNavigation;
         })->groupBy(function ($resource) {
-            if (property_exists($resource, 'category')) {
-                return __(ucwords($resource::$category));
+            if (property_exists($resource, 'group')) {
+                return __(ucwords($resource::$group));
             }
-
             return __('Other');
         })->sortKeys();
     }

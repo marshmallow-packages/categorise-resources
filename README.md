@@ -1,5 +1,9 @@
 # Nova Resource Categoriser
 
+This is a packages to make your side menu in Nova a bit nicer. This package works with the normal `$group` variable from Nova to group your resources. What this package does, is it collapses your groups to keep it nice and tidy. Also you are able to add an icon to your groups to make nagivating even more fun.
+
+<img src="https://raw.githubusercontent.com/marshmallow-packages/categorise-resources/master/resources/images/screenshot.png">
+
 ## Installation
 
 You can install the package in to a Laravel app that uses [Nova](https://nova.laravel.com) via composer:

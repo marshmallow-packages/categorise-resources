@@ -22,11 +22,11 @@ public static $group = "Your Category label";
 
 ## Icons
 You can add svg icon from http://www.zondicons.com/icons.html. To use an icon, please follow the steps below.
- - [] Download zondicons and open `*.svg` icon in browser
- - [] `right click` in browser and choose inspect element
- - [] Copy the svg tag and place it in a `$group_icon` parameter on one of the resources in the group. We will use the first we find in the group.
- - [] Add the class `sidebar-icon` to the svg tag like so: `<svg class="sidebar-icon">`.
- - [] Add the fill attibute `var(--sidebar-icon)` to the path tag like so: `<path fill="var(--sidebar-icon)">`.
+ - Download zondicons and open `*.svg` icon in browser
+ - `right click` in browser and choose inspect element
+ - Copy the svg tag and place it in a `$group_icon` parameter on one of the resources in the group. We will use the first we find in the group.
+ - Add the class `sidebar-icon` to the svg tag like so: `<svg class="sidebar-icon">`.
+ - Add the fill attibute `var(--sidebar-icon)` to the path tag like so: `<path fill="var(--sidebar-icon)">`.
 
 ```php
 class Customer extends Resource

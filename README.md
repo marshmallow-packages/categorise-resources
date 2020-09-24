@@ -5,7 +5,6 @@ This is a packages to make your side menu in Nova a bit nicer. This package work
 <img src="https://raw.githubusercontent.com/marshmallow-packages/categorise-resources/master/resources/images/screenshot.png">
 
 ## Installation
-
 You can install the package in to a Laravel app that uses [Nova](https://nova.laravel.com) via composer:
 
 ```bash
@@ -13,12 +12,14 @@ composer require marshmallow/categorise-resources
 ```
 
 ## Usage
-
 In any / all of your resources add
 
 ```php
 public static $group = "Your Category label";
 ```
+
+## Ordering
+Optionaly, you can add `public static $priority = 10;` to your resource. This priotity will determine the position of the resource in the group that its in. Currently the groups can not be ordered. This is done alphabeticly.
 
 ## Icons
 You can add svg icon from http://www.zondicons.com/icons.html. To use an icon, please follow the steps below.

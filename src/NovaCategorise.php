@@ -9,7 +9,7 @@ class NovaCategorise extends Nova
 {
     public static function availableResourcesGrouped(Request $request)
     {
-        return collect(self::availableResources($request))->filter(function ($resource) {
+        $collections = collect(self::availableResources($request))->filter(function ($resource) {
             return $resource::$displayInNavigation;
         })->groupBy(function ($resource) {
             if (property_exists($resource, 'group')) {
@@ -17,5 +17,17 @@ class NovaCategorise extends Nova
             }
             return __('Other');
         })->sortKeys();
+
+        /**
+         * Order the resources by $priority in there own group.
+         */
+        foreach ($collections as $key => $collection) {
+        	$ordered = $collection->sortBy(function ($resource) {
+        		return $resource::$priority ?? 9999;
+        	});
+        	$collections[$key] = $ordered;
+        }
+
+        return $collections;
     }
 }

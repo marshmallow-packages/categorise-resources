@@ -2,8 +2,8 @@
 
 namespace Marshmallow\CategoriseResources;
 
-use Laravel\Nova\Nova;
 use Illuminate\Http\Request;
+use Laravel\Nova\Nova;
 
 class NovaCategorise extends Nova
 {
@@ -15,6 +15,7 @@ class NovaCategorise extends Nova
             if (property_exists($resource, 'group')) {
                 return __(ucwords($resource::$group));
             }
+
             return __('Other');
         })->sortKeys();
 
@@ -22,10 +23,10 @@ class NovaCategorise extends Nova
          * Order the resources by $priority in there own group.
          */
         foreach ($collections as $key => $collection) {
-        	$ordered = $collection->sortBy(function ($resource) {
-        		return $resource::$priority ?? 9999;
-        	});
-        	$collections[$key] = $ordered;
+            $ordered = $collection->sortBy(function ($resource) {
+                return $resource::$priority ?? 9999;
+            });
+            $collections[$key] = $ordered;
         }
 
         return $collections;

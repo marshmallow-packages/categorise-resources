@@ -2,8 +2,8 @@
 
 namespace Marshmallow\CategoriseResources;
 
-use Illuminate\Http\Request;
 use Laravel\Nova\Nova;
+use Illuminate\Http\Request;
 
 class NovaCategorise extends Nova
 {

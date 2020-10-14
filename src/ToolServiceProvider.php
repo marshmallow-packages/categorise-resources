@@ -2,11 +2,11 @@
 
 namespace Marshmallow\CategoriseResources;
 
-use Illuminate\Support\Collection;
-use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Str;
-use Laravel\Nova\Events\ServingNova;
 use Laravel\Nova\Nova;
+use Illuminate\Support\Str;
+use Illuminate\Support\Collection;
+use Laravel\Nova\Events\ServingNova;
+use Illuminate\Support\ServiceProvider;
 
 class ToolServiceProvider extends ServiceProvider
 {

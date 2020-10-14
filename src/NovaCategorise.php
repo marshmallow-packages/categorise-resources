@@ -30,6 +30,7 @@ class NovaCategorise extends Nova
             if (property_exists($resource, 'group')) {
                 return __(ucwords($resource::$group));
             }
+
             return __('Other');
         });
 

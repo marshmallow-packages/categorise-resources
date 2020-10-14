@@ -18,7 +18,10 @@ In any / all of your resources add
 public static $group = "Your Category label";
 ```
 
-## Ordering
+## Order groups
+Optionaly, you can add `public static $group_priority = 10;` to the same resources where you add your icon. This doesn't have to be the same one, it just has to be one of the resources within the group.
+
+## Order resources
 Optionaly, you can add `public static $priority = 10;` to your resource. This priotity will determine the position of the resource in the group that its in. Currently the groups can not be ordered. This is done alphabeticly.
 
 ## Icons

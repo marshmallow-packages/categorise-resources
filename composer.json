@@ -12,14 +12,15 @@
             "name": "Stef van Esch",
             "email": "stef@marshmallow.dev",
             "role": "Developer"
-        },{
+        },
+        {
             "name": "Alex Bowers",
             "email": "bowersbros@gmail.com",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": ">=7.1.0"
+        "php": "^7.1|^8.0"
     },
     "autoload": {
         "psr-4": {

@@ -2416,9 +2416,9 @@ eslint-config-prettier@^8.1.0:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-8.1.0.tgz#4ef1eaf97afe5176e6a75ddfb57c335121abc5a6"
 
-eslint-plugin-vue@^7.8.0:
-  version "7.8.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-vue/-/eslint-plugin-vue-7.8.0.tgz#cb0e85d65b65fa8d15e783fbb03c049d2c4cfdae"
+eslint-plugin-vue@^7.11.0:
+  version "7.11.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-vue/-/eslint-plugin-vue-7.11.0.tgz#c19b098899b7e3cd692beffbbe73611064ef1ea6"
   dependencies:
     eslint-utils "^2.1.0"
     natural-compare "^1.4.0"

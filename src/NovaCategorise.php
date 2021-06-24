@@ -9,12 +9,11 @@ class NovaCategorise extends Nova
 {
     public static function availableResourcesGrouped(Request $request)
     {
-        $collections = collect(self::availableResources($request))->filter(function ($resource) {
-
+        $collections = collect(self::availableResources($request))->filter(function ($resource) use ($request) {
             /**
              * Check if this resource should be displayed in the menu.
              */
-            return $resource::$displayInNavigation;
+            return $resource::availableForNavigation($request);
         })->sortBy(function ($collection) {
 
             /**

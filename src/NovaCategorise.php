@@ -66,11 +66,16 @@ class NovaCategorise extends Nova
          */
         foreach ($group_setup as $key => $group) {
             $group_resources = $group['resources'];
-            usort($group_resources, function ($a, $b) {
-                return $a['priority'] - $b['priority'];
-            });
 
-            $group_setup[$key]['resources'] = $group_resources;
+            if (!empty($group_resources)) {
+                usort($group_resources, function ($a, $b) {
+                    return $a['priority'] - $b['priority'];
+                });
+
+                $group_setup[$key]['resources'] = $group_resources;
+            } else {
+                unset($group_setup[$key]);
+            }
         }
 
         return $group_setup;

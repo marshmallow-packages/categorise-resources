@@ -20,6 +20,6 @@
     "dependencies": {
         "animated-scroll-to": "^2.2.0",
         "vue": "^2.6.12",
-        "vue-loader": "^15.9.6"
+        "vue-loader": "^17.0.0"
     }
 }

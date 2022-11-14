@@ -19,7 +19,7 @@
     },
     "dependencies": {
         "animated-scroll-to": "^2.2.0",
-        "vue": "^2.6.12",
+        "vue": "^3.2.45",
         "vue-loader": "^15.9.6"
     }
 }
